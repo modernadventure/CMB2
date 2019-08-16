@@ -593,6 +593,12 @@ class CMB2 extends CMB2_Base {
 	 */
 	public function render_group_row( $field_group ) {
 
+		/**
+		 * HACK: allows per group content before/after (otherwise cached)
+                 * @link: https://wordpress.org/support/topic/how-to-bypass-cached-results/
+		 */
+		$field_group->unset_param_callback_cache( 'after_group_row' );
+
 		$field_group->peform_param_callback( 'before_group_row' );
 		$closed_class     = $field_group->options( 'closed' ) ? ' closed' : '';
 		$confirm_deletion = $field_group->options( 'remove_confirm' );
