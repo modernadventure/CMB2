@@ -28,8 +28,8 @@ window.CMB2 = window.CMB2 || {};
 	cmb.$id = $id;
 	var defaults = {
 		idNumber        : false,
-		repeatEls       : 'input:not([type="button"]),select,textarea,.cmb2-media-status',
-		noEmpty         : 'input:not([type="button"]):not([type="radio"]):not([type="checkbox"]),textarea',
+		repeatEls       : 'input:not([type="button"],[id^=filelist]),select,textarea,.cmb2-media-status',
+                noEmpty         : 'input:not([type="button"]):not([type="radio"]):not([type="checkbox"]):not([id$="product_room_uid"]),textarea',
 		repeatUpdate    : 'input:not([type="button"]),select,textarea,label',
 		styleBreakPoint : 450,
 		mediaHandlers   : {},

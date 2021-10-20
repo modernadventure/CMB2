@@ -302,8 +302,9 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'css', asciify.concat( styles ) );
 	grunt.registerTask( 'hint', asciify.concat( hint ) );
 	grunt.registerTask( 'js', asciify.concat( js ) );
-	grunt.registerTask( 'tests', asciify.concat( tests ) );
-	grunt.registerTask( 'default', asciify.concat( styles, js, tests ) );
+	// grunt.registerTask( 'tests', asciify.concat( tests ) );
+	// grunt.registerTask( 'default', asciify.concat( styles, js, tests ) );
+	grunt.registerTask( 'default', asciify.concat( styles, js ) );
 
 	// apigen
 	grunt.registerTask( 'apigen', asciify.concat( ['exec:apigen'] ) );
